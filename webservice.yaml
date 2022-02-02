@@ -23,5 +23,9 @@
     copy:
       src:  index.html
       dest: /var/www/html
+ 
+  - name: Installing php
+    shell: yum install php* -y && systemct restart httpd
+
 ...
 
