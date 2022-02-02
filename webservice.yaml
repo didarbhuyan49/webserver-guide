@@ -7,7 +7,7 @@
       name: httpd
       state: present
 
-  - name: starting http webserver
+  - name: starting httpd webserver
     service:
       name: httpd
       state: started
