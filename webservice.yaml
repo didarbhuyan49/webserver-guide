@@ -1,0 +1,27 @@
+---
+- name: Installing and configuring webserver
+  hosts: web
+  tasks:
+  - name: Installing http webserver
+    yum:
+      name: httpd
+      state: present
+
+  - name: starting http webserver
+    service:
+      name: http
+      state: started
+
+  - name: Allowing http service or 80 port in firewall
+    firewalld:
+      service: http
+      permanent: yes
+      immediate: yes
+      state: enabled
+
+  - name: Copying index.html file
+    copy:
+      src:  index.html
+      dest: /var/www/html
+...
+
