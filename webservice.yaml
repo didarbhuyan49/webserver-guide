@@ -9,7 +9,7 @@
 
   - name: starting http webserver
     service:
-      name: http
+      name: httpd
       state: started
 
   - name: Allowing http service or 80 port in firewall
