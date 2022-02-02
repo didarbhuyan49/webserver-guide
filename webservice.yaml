@@ -21,7 +21,7 @@
 
   - name: Copying index.html file
     copy:
-      src:  index.html
+      src:  index.php
       dest: /var/www/html
  
 
