@@ -24,8 +24,6 @@
       src:  index.html
       dest: /var/www/html
  
-  - name: Installing php
-    raw: yum install php* -y && systemct restart httpd
 
 ...
 
