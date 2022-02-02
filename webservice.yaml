@@ -12,7 +12,7 @@
       name: httpd
       state: started
 
-  - name: Allowing http service or 80 port in firewall
+  - name: Allowing http service <or> 80 port in firewall
     firewalld:
       service: http
       permanent: yes
